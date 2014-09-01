@@ -13,13 +13,9 @@ You can customize the code easily because the code is simple.
 
 ## Features
 
-* 3D effect
-* auto rotation
-* inertial effect after rotation
-
-* 3D效果
-* 自动旋转效果
-* 惯性滚动效果
+* 3D effect 3D效果
+* auto rotation 自动旋转效果
+* inertial effect after rotation 惯性滚动效果
 
 ## Usage
 ```Objective-C
