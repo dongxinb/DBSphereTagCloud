@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A011ADAA-FB47-4310-88AC-DAF91C4E0802</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DBSphereTagCloud</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AEA233ED2B5BFB582ABC16E3B78522508684D30E</key>
+		<string>https://github.com/dongxinb/DBSphereTagCloud.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DBSphereTagCloud.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AEA233ED2B5BFB582ABC16E3B78522508684D30E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dongxinb/DBSphereTagCloud.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AEA233ED2B5BFB582ABC16E3B78522508684D30E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AEA233ED2B5BFB582ABC16E3B78522508684D30E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DBSphereTagCloud</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -12,5 +12,7 @@
 @interface DBSphereView : UIView
 
 - (void)setCloudTags:(NSArray *)array;
+- (void)timerStart;
+- (void)timerStop;
 
 @end
