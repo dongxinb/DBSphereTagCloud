@@ -17,7 +17,9 @@ You can customize the code easily because the code is simple.
 # Usage
 
   DBSphereView *view = [[DBSphereView alloc] initWithFrame:CGRectMake(0, 100, 320, 320)];
+  
   [view setCloudTags:buttonArray];
+  
   [self.view addSubView:view];
   
 # License
