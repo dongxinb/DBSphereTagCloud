@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98145DBC19B6A0E800CFBB12 /* DBSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98145DBB19B6A0E800CFBB12 /* DBSphereView.m */; };
 		9880A38419B4972000227960 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9880A38319B4972000227960 /* main.m */; };
 		9880A38719B4972000227960 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9880A38619B4972000227960 /* AppDelegate.m */; };
 		9880A38A19B4972000227960 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9880A38919B4972000227960 /* ViewController.m */; };
 		9880A38D19B4972000227960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9880A38B19B4972000227960 /* Main.storyboard */; };
 		9880A38F19B4972000227960 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9880A38E19B4972000227960 /* Images.xcassets */; };
 		9880A39B19B4972000227960 /* DBSphereTagCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9880A39A19B4972000227960 /* DBSphereTagCloudTests.m */; };
-		9880A3A819B4981800227960 /* DBSphereView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9880A3A719B4981800227960 /* DBSphereView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		98145DB819B6A0E800CFBB12 /* DBMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBMatrix.h; path = ../../DBSphereTagCloud/DBMatrix.h; sourceTree = "<group>"; };
+		98145DB919B6A0E800CFBB12 /* DBPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBPoint.h; path = ../../DBSphereTagCloud/DBPoint.h; sourceTree = "<group>"; };
+		98145DBA19B6A0E800CFBB12 /* DBSphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBSphereView.h; path = ../../DBSphereTagCloud/DBSphereView.h; sourceTree = "<group>"; };
+		98145DBB19B6A0E800CFBB12 /* DBSphereView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBSphereView.m; path = ../../DBSphereTagCloud/DBSphereView.m; sourceTree = "<group>"; };
 		9880A37E19B4972000227960 /* DBSphereTagCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBSphereTagCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9880A38219B4972000227960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9880A38319B4972000227960 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -39,10 +43,6 @@
 		9880A39419B4972000227960 /* DBSphereTagCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBSphereTagCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9880A39919B4972000227960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9880A39A19B4972000227960 /* DBSphereTagCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBSphereTagCloudTests.m; sourceTree = "<group>"; };
-		9880A3A419B4980900227960 /* DBMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMatrix.h; sourceTree = SOURCE_ROOT; };
-		9880A3A519B4980900227960 /* DBPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBPoint.h; sourceTree = SOURCE_ROOT; };
-		9880A3A619B4981800227960 /* DBSphereView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSphereView.h; sourceTree = SOURCE_ROOT; };
-		9880A3A719B4981800227960 /* DBSphereView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBSphereView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 		9880A38019B4972000227960 /* DBSphereTagCloud */ = {
 			isa = PBXGroup;
 			children = (
-				9880A3A919B4981F00227960 /* DBSphereTagCloud */,
+				9880A3A919B4981F00227960 /* class */,
 				9880A38519B4972000227960 /* AppDelegate.h */,
 				9880A38619B4972000227960 /* AppDelegate.m */,
 				9880A38819B4972000227960 /* ViewController.h */,
@@ -122,15 +122,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9880A3A919B4981F00227960 /* DBSphereTagCloud */ = {
+		9880A3A919B4981F00227960 /* class */ = {
 			isa = PBXGroup;
 			children = (
-				9880A3A419B4980900227960 /* DBMatrix.h */,
-				9880A3A519B4980900227960 /* DBPoint.h */,
-				9880A3A619B4981800227960 /* DBSphereView.h */,
-				9880A3A719B4981800227960 /* DBSphereView.m */,
+				98145DB819B6A0E800CFBB12 /* DBMatrix.h */,
+				98145DB919B6A0E800CFBB12 /* DBPoint.h */,
+				98145DBA19B6A0E800CFBB12 /* DBSphereView.h */,
+				98145DBB19B6A0E800CFBB12 /* DBSphereView.m */,
 			);
-			name = DBSphereTagCloud;
+			name = class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9880A38A19B4972000227960 /* ViewController.m in Sources */,
-				9880A3A819B4981800227960 /* DBSphereView.m in Sources */,
+				98145DBC19B6A0E800CFBB12 /* DBSphereView.m in Sources */,
 				9880A38719B4972000227960 /* AppDelegate.m in Sources */,
 				9880A38419B4972000227960 /* main.m in Sources */,
 			);

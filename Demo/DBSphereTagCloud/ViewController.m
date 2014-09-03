@@ -25,7 +25,7 @@
     NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:0];
     for (NSInteger i = 0; i < 50; i ++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-        [btn setTitle:[NSString stringWithFormat:@"P%d", i] forState:UIControlStateNormal];
+        [btn setTitle:[NSString stringWithFormat:@"P%ld", i] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         btn.titleLabel.font = [UIFont systemFontOfSize:24.];
         btn.frame = CGRectMake(0, 0, 60, 20);
