@@ -17,6 +17,10 @@ You can customize the code easily because the code is simple.
 * auto rotation 自动旋转效果
 * inertial effect after rotation 惯性滚动效果
 
+## Installation
+
+```pod "DBSphereTagCloud"```
+
 ## Usage
 ```Objective-C
   DBSphereView *view = [[DBSphereView alloc] initWithFrame:CGRectMake(0, 100, 320, 320)];
