@@ -14,6 +14,7 @@
 		9880A38D19B4972000227960 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9880A38B19B4972000227960 /* Main.storyboard */; };
 		9880A38F19B4972000227960 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9880A38E19B4972000227960 /* Images.xcassets */; };
 		9880A39B19B4972000227960 /* DBSphereTagCloudTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9880A39A19B4972000227960 /* DBSphereTagCloudTests.m */; };
+		9EFE52251A53C19700C90323 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFE52241A53C19700C90323 /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		9880A39419B4972000227960 /* DBSphereTagCloudTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBSphereTagCloudTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9880A39919B4972000227960 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9880A39A19B4972000227960 /* DBSphereTagCloudTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBSphereTagCloudTests.m; sourceTree = "<group>"; };
+		9EFE52241A53C19700C90323 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EFE52251A53C19700C90323 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +69,7 @@
 		9880A37519B4972000227960 = {
 			isa = PBXGroup;
 			children = (
+				9EFE52241A53C19700C90323 /* CoreMotion.framework */,
 				9880A38019B4972000227960 /* DBSphereTagCloud */,
 				9880A39719B4972000227960 /* DBSphereTagCloudTests */,
 				9880A37F19B4972000227960 /* Products */,
