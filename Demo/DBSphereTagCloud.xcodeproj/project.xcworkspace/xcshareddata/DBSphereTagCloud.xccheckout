@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>AEA233ED2B5BFB582ABC16E3B78522508684D30E</key>
-		<string>https://github.com/dongxinb/DBSphereTagCloud.git</string>
+		<string>https://github.com/liulunet/DBSphereTagCloud.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DBSphereTagCloud.xcodeproj</string>
+	<string>Demo/DBSphereTagCloud.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>AEA233ED2B5BFB582ABC16E3B78522508684D30E</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/dongxinb/DBSphereTagCloud.git</string>
+	<string>https://github.com/liulunet/DBSphereTagCloud.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

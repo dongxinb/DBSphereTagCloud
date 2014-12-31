@@ -8,8 +8,11 @@
 
 #import "DBSphereView.h"
 #import "DBMatrix.h"
+#import <CoreMotion/CoreMotion.h>
 
 @interface DBSphereView() <UIGestureRecognizerDelegate>
+
+@property (nonatomic, strong) CMMotionManager *motionManager;
 
 @end
 
@@ -32,6 +35,9 @@
     if (self) {
         UIPanGestureRecognizer *gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
         [self addGestureRecognizer:gesture];
+        self.motionManager = [[CMMotionManager alloc] init];
+        self.motionManager.accelerometerUpdateInterval = 0.01; // 告诉manager，更新频率是100Hz
+        [self.motionManager startAccelerometerUpdates]; // 开始更新，后台线程开始运行。
     }
     return self;
 }
@@ -72,7 +78,7 @@
         }];
         
     }
- 
+    
     NSInteger a =  arc4random() % 10 - 5;
     NSInteger b =  arc4random() % 10 - 5;
     normalDirection = DBPointMake(a, b, 0);
@@ -83,7 +89,7 @@
 
 - (void)updateFrameOfPoint:(NSInteger)index direction:(DBPoint)direction andAngle:(CGFloat)angle
 {
-
+    
     NSValue *value = [coordinate objectAtIndex:index];
     DBPoint point;
     [value getValue:&point];
@@ -93,7 +99,7 @@
     coordinate[index] = value;
     
     [self setTagOfPoint:rPoint andIndex:index];
-
+    
 }
 
 - (void)setTagOfPoint: (DBPoint)point andIndex:(NSInteger)index
@@ -129,7 +135,13 @@
 - (void)autoTurnRotation
 {
     for (NSInteger i = 0; i < tags.count; i ++) {
-        [self updateFrameOfPoint:i direction:normalDirection andAngle:0.002];
+        
+        DBPoint direction = DBPointMake(self.motionManager.accelerometerData.acceleration.y, self.motionManager.accelerometerData.acceleration.x, 0);
+        
+        CGFloat distance = sqrt(direction.x * direction.x + direction.y * direction.y + direction.z * direction.z);
+        
+        CGFloat angle = distance / (self.frame.size.width / 2.);
+        [self updateFrameOfPoint:i direction:direction andAngle:angle];
     }
     
 }
@@ -155,7 +167,7 @@
     if (velocity <= 0) {
         [self inertiaStop];
     }else {
-        velocity -= 70.;
+        velocity -= 30.;
         CGFloat angle = velocity / self.frame.size.width * 2. * inertia.duration;
         for (NSInteger i = 0; i < tags.count; i ++) {
             [self updateFrameOfPoint:i direction:normalDirection andAngle:angle];
@@ -188,9 +200,10 @@
         last = current;
     }else if (gesture.state == UIGestureRecognizerStateEnded) {
         CGPoint velocityP = [gesture velocityInView:self];
+        NSLog(@"x:%f y:%f",velocityP.x,velocityP.y);
         velocity = sqrt(velocityP.x * velocityP.x + velocityP.y * velocityP.y);
         [self inertiaStart];
-
+        
     }
     
     
