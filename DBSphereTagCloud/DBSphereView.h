@@ -29,4 +29,6 @@
  */
 - (void)timerStop;
 
+- (void)handlePanGesture:(UIPanGestureRecognizer *)gesture;
+
 @end
