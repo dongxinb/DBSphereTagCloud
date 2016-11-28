@@ -26,11 +26,21 @@
     CADisplayLink *inertia;
 }
 
+- (void)setup {
+    UIPanGestureRecognizer *gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    [self addGestureRecognizer:gesture];
+    
+    inertia = [CADisplayLink displayLinkWithTarget:self selector:@selector(inertiaStep)];
+    [inertia addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(autoTurnRotation)];
+    [timer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+}
+
 - (id)initWithCoder:(NSCoder*)aDecoder
 {
     if(self = [super initWithCoder:aDecoder]) {
-        UIPanGestureRecognizer *gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-        [self addGestureRecognizer:gesture];
+        [self setup];
     }
     return self;
 }
@@ -39,8 +49,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        UIPanGestureRecognizer *gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-        [self addGestureRecognizer:gesture];
+        [self setup];
     }
     return self;
 }
@@ -125,14 +134,12 @@
 
 - (void)timerStart
 {
-    timer = [CADisplayLink displayLinkWithTarget:self selector:@selector(autoTurnRotation)];
-    [timer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    timer.paused = NO;
 }
 
 - (void)timerStop
 {
-    [timer invalidate];
-    timer = nil;
+    timer.paused = YES;
 }
 
 - (void)autoTurnRotation
@@ -148,15 +155,13 @@
 - (void)inertiaStart
 {
     [self timerStop];
-    inertia = [CADisplayLink displayLinkWithTarget:self selector:@selector(inertiaStep)];
-    [inertia addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    inertia.paused = NO;
 }
 
 - (void)inertiaStop
 {
-    [inertia invalidate];
-    inertia = nil;
     [self timerStart];
+    inertia.paused = YES;
 }
 
 - (void)inertiaStep
