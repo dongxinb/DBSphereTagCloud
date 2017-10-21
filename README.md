@@ -21,7 +21,26 @@ You can customize the code easily because the code is simple.
 
 ## Installation
 
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org/) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate this into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
 ```pod "DBSphereTagCloud"```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage/) compatible.
+Add the following into your `Cartfile`, then run `carthage update`.
+
+```
+github "dongxinb/DBSphereTagCloud"
+```
 
 ## Usage
 ```Objective-C
